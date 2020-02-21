@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"  />
+
+    <style rel="stylesheet" type="text/css">
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="" id="search">
+        <input type="text" name="texto">
+
+        <ul id="matches"></ul>
+    </form>
+
+
+
+    <nav>
+
+        <button 
+            onclick="showMenu()" 
+            id="burger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="hidden">
+            <li class="item">Home</li>
+            <li class="item">Nosotros</li>
+            <li class="item">Contacto</li>
+        </ul>
+    </nav>
+
+    <div id="editor">
+        <select id="font-size" onchange="changeFontSize(this)">
+            <!-- options dinamicos -->
+        </select>
+
+        <button onclick="alignText(this)" value="left">
+            <i class="fas fa-align-left"></i>
+        </button>
+        <button onclick="alignText(this)" value="center">
+            <i class="fas fa-align-center"></i>
+        </button>
+        <button onclick="alignText(this)" value="right">
+            <i class="fas fa-align-right"></i>
+        </button>
+        <button onclick="alignText(this)" value="justify">
+            <i class="fas fa-align-justify"></i>
+        </button>
+
+        <p id="content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque officiis in voluptatem quae harum sint dignissimos laborum distinctio ea asperiores, vero qui magnam veritatis repellendus. Ipsa nam tenetur tempore sapiente?
+        </p>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
